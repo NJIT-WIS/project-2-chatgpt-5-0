@@ -4,22 +4,25 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import { useTranslation } from 'next-i18next'
 
 export default function Home({ allPostsData }) {
+  const { t } = useTranslation()
+
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{t('site-title')}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+        <p>{t('introduction')}</p>
         <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          ({t('sample-website')}{' '}
+          <a href="https://nextjs.org/learn">{t('nextjs-tutorial')}</a>.)
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>{t('blog-title')}</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>

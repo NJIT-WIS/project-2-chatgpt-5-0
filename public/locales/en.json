@@ -1,4 +1,8 @@
 {
-  "welcome": "Welcome to my app!",
-  "button": "Click me"
+  "site-title": "Next.js Blog",
+  "introduction": "[Your Self Introduction]",
+  "sample-website": "This is a sample website - you’ll be building a site like this in",
+  "nextjs-tutorial": "our Next.js tutorial",
+  "blog-title": "Blog"
 }
+
