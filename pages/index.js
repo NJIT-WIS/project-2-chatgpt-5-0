@@ -6,13 +6,25 @@ import Link from 'next/link'
 import Date from '../components/date'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
+import ReactGA from 'react-ga';
+
 
 export default function Home() {
+
   return (
     <div className={utilStyles.container}>
       <Head>
         <title>MyWebClass.org</title>
         <link rel="icon" href="/favicon.ico" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXE9WXQFQG"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CXE9WXQFQG');
+          `,
+        }}></script>
       </Head>
 
         <header className={utilStyles.header}>

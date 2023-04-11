@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
+import ReactGA from 'react-ga';
 
 export default function About() {
   const { t } = useTranslation('common')
@@ -11,6 +12,15 @@ export default function About() {
     <div className={utilStyles.container}>
       <Head>
         <title>{t('About')} | MyWebClass.org</title>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXE9WXQFQG"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CXE9WXQFQG');
+          `,
+        }}></script>
       </Head>
 
       <header className={utilStyles.header}>
