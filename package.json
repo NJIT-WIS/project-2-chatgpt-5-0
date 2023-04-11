@@ -14,9 +14,10 @@
     "fs": "0.0.1-security",
     "glob": "^9.3.2",
     "gray-matter": "^4.0.3",
+    "mailchimp-api-v3": "^1.15.0",
     "next": "^13.3.0",
     "next-i18next": "^13.2.2",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1"
