@@ -23,13 +23,31 @@ jobs:
           sudo apt-get install -y libgbm-dev         
           npm ci
           npx playwright install chromium
-          npm install -g lighthouse chrome-launcher axe-core chromium wait-on
+          npm install -g lighthouse chrome-launcher axe-core chromium wait-on 
+          npm install next@latest
+
+      - name: Create the build
+        run: npx next build
+
+      - name: Check and kill process on port 3000
+        run: |
+          sudo fuser -k 3000/tcp || true
+
       - name: Start the application
         run: |
           export DISPLAY=:1
-          npm run start & npx wait-on http://localhost:3000
+          echo "Starting the application..."
+          npm run start & npx wait-on --timeout 50000 http://0.0.0.0:3000
+          echo "Application started."
+
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.js
+
+      - name: Create/Check test-results directory
+        run: |
+          if [ ! -d "test-results" ]; then
+            mkdir test-results
+          fi
 
       - name: Generate Lighthouse Report
         run: |
