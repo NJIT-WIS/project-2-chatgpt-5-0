@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next'
 import React from 'react'
 import Link from 'next/link'
 import ReactGA from 'react-ga';
+import SubscribeForm from "../components/newsletter";
 
 export default function Courses() {
   return (
@@ -67,23 +68,7 @@ export default function Courses() {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo mauris eget ante bibendum vehicula. Suspendisse potenti. Sed auctor nulla non orci finibus, non varius tellus suscipit. Aenean ut sapien dolor. Proin rutrum libero quis magna blandit aliquet. Vestibulum eleifend risus id sapien feugiat, ut tincidunt est dictum. Nunc id metus at nunc lobortis semper. </p>
         </section>
       </main>
-
-      <footer className={`${utilStyles.flex} ${utilStyles.justifyBetween} ${utilStyles.itemsCenter} ${utilStyles.py4} ${utilStyles.bgGray}`}>
-      <div className={`${utilStyles.flex} ${utilStyles.flexCol} ${utilStyles.w50} ${utilStyles.mr4}`}>
-        <h3 className={`${utilStyles.mb2}`}>Subscribe to our Newsletter</h3>
-        <form>
-          <label htmlFor="email" className={`${utilStyles.mb2}`}>Email:</label>
-          <input type="email" id="email" name="email" className={`${utilStyles.wFull} ${utilStyles.p2} ${utilStyles.mb4} ${utilStyles.border} ${utilStyles.borderGray} ${utilStyles.rounded}`} required />
-          <button type="submit" className={utilStyles.button}>Subscribe</button>
-        </form>
-      </div>
-      <div className={`${utilStyles.flex} ${utilStyles.itemsCenter}`}>
-        <a href="#" className={`${utilStyles.mr2} ${utilStyles.textGray}`}>Facebook</a>
-        <a href="#" className={`${utilStyles.mr2} ${utilStyles.textGray}`}>Twitter</a>
-        <a href="#" className={`${utilStyles.textGray}`}>Instagram</a>
-      </div>
-    </footer>
-
+      <SubscribeForm/>
 </div>
   )
 }

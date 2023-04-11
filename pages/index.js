@@ -5,9 +5,9 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-import { useTranslation } from 'next-i18next'
 import React from 'react'
 import ReactGA from 'react-ga';
+import SubscribeForm from "../components/newsletter";
 
 
 
@@ -69,26 +69,8 @@ export default function Home() {
     </div>
   </section>
 </main>
-
-
-
-
-     <footer className={`${utilStyles.flex} ${utilStyles.justifyBetween} ${utilStyles.itemsCenter} ${utilStyles.py4} ${utilStyles.bgGray}`}>
-      <div className={`${utilStyles.flex} ${utilStyles.flexCol} ${utilStyles.w50} ${utilStyles.mr4}`}>
-        <h3 className={`${utilStyles.mb2}`}>Subscribe to our Newsletter</h3>
-        <form>
-          <label htmlFor="email" className={`${utilStyles.mb2}`}>Email:</label>
-          <input type="email" id="email" name="email" className={`${utilStyles.wFull} ${utilStyles.p2} ${utilStyles.mb4} ${utilStyles.border} ${utilStyles.borderGray} ${utilStyles.rounded}`} required />
-          <button type="submit" className={utilStyles.button}>Subscribe</button>
-        </form>
-      </div>
-      <div className={`${utilStyles.flex} ${utilStyles.itemsCenter}`}>
-        <a href="#" className={`${utilStyles.mr2} ${utilStyles.textGray}`}>Facebook</a>
-        <a href="#" className={`${utilStyles.mr2} ${utilStyles.textGray}`}>Twitter</a>
-        <a href="#" className={`${utilStyles.textGray}`}>Instagram</a>
-      </div>
-    </footer>
-    </div>
+<SubscribeForm/>
+</div>
 )
 }
 
