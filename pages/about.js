@@ -67,7 +67,7 @@ export default function About() {
     <button
       className={`${utilStyles.button} slideToSection`}
       onClick={() => {
-        document.getElementById('instructor1').scrollIntoView();
+        document.getElementById('instructor1').scrollIntoView({ behavior: 'smooth' });;
       }}
     >
       Instructor 1
