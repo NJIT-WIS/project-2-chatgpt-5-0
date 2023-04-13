@@ -8,6 +8,8 @@ import Date from '../components/date'
 import React from 'react'
 import ReactGA from 'react-ga';
 import SubscribeForm from "../components/newsletter";
+import Image from 'next/image';
+
 
 
 
@@ -58,7 +60,7 @@ export default function Home() {
 
 <main className={utilStyles.main}>
   <section className={utilStyles.hero}>
-    <div className={utilStyles.heroTextContainer} style={{backgroundImage: `url(../../images/nelo_classroom.png)`}}>
+    <div className={utilStyles.heroTextContainer} style={{backgroundImage: `url(/project-2-chatgpt-5-0/../images/nelo_classroom.png)`}}>
       <div className={utilStyles.heroText}>
         <h1>Welcome to MyWebClass.Org!</h1>
         <p>Discover advanced technologies that will transform your teaching and their learning journey.</p>
