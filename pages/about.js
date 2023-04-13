@@ -6,6 +6,8 @@ import Link from 'next/link'
 import ReactGA from 'react-ga';
 import SubscribeForm from "../components/newsletter";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export default function About() {
   const { t } = useTranslation('common')
 
@@ -56,24 +58,55 @@ export default function About() {
         <h1 className={utilStyles.headingXl}>{t('About MyWebClass.Org')}</h1>
 
        <div className={utilStyles.imageContainer}>
-  <div className={utilStyles.image}>
-    <img src="../../images/comic.png" alt="Image 1" />
-    <div className={utilStyles.buttonContainer}>
-      <button className={`${utilStyles.button} slideToSection`} onClick={() => {document.getElementById("instructor1").scrollIntoView();}}>Instructor 1</button>
-    </div>
+ <div className={utilStyles.image}>
+  <img
+    src={`${isProd ? '/project-2-chatgpt-5-0' : ''}/images/comic.png`}
+    alt="Image 1"
+  />
+  <div className={utilStyles.buttonContainer}>
+    <button
+      className={`${utilStyles.button} slideToSection`}
+      onClick={() => {
+        document.getElementById('instructor1').scrollIntoView();
+      }}
+    >
+      Instructor 1
+    </button>
   </div>
-  <div className={utilStyles.image}>
-    <img src="../../images/comic.png" alt="Image 2" />
-    <div className={utilStyles.buttonContainer}>
-      <button className={utilStyles.button} onClick={() => {document.getElementById("instructor2").scrollIntoView({ behavior: 'smooth' });}}>Instructor 2</button>
-    </div>
+</div>
+<div className={utilStyles.image}>
+  <img
+    src={`${isProd ? '/project-2-chatgpt-5-0' : ''}/images/comic.png`}
+    alt="Image 2"
+  />
+  <div className={utilStyles.buttonContainer}>
+    <button
+      className={utilStyles.button}
+      onClick={() => {
+        document.getElementById('instructor2').scrollIntoView({ behavior: 'smooth' });
+      }}
+    >
+      Instructor 2
+    </button>
   </div>
-  <div className={utilStyles.image}>
-    <img src="../../images/comic.png" alt="Image 3" />
-    <div className={utilStyles.buttonContainer}>
-      <button className={utilStyles.button} onClick={() => {document.getElementById("instructor3").scrollIntoView({ behavior: 'smooth' });}}>Instructor 3</button>
-    </div>
+</div>
+<div className={utilStyles.image}>
+  <img
+    src={`${isProd ? '/project-2-chatgpt-5-0' : ''}/images/comic.png`}
+    alt="Image 3"
+  />
+  <div className={utilStyles.buttonContainer}>
+    <button
+      className={utilStyles.button}
+      onClick={() => {
+        document.getElementById('instructor3').scrollIntoView({ behavior: 'smooth' });
+      }}
+    >
+      Instructor 3
+    </button>
   </div>
+</div>
+
 </div>
 
 
