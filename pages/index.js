@@ -58,7 +58,7 @@ export default function Home() {
 
 <main className={utilStyles.main}>
   <section className={utilStyles.hero}>
-    <div className={utilStyles.heroTextContainer} style={{backgroundImage: `url(/images/nelo_classroom.png)`}}>
+    <div className={utilStyles.heroTextContainer} style={{backgroundImage: `url(../../images/nelo_classroom.png)`}}>
       <div className={utilStyles.heroText}>
         <h1>Welcome to MyWebClass.Org!</h1>
         <p>Discover advanced technologies that will transform your teaching and their learning journey.</p>
