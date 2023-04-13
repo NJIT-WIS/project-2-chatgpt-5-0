@@ -1,32 +1,36 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import CookieBanner from "../components/cookieBanner"
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
-import React from 'react'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import CookieBanner from '../components/cookieBanner';
+import utilStyles from '../styles/utils.module.css';
+import { getSortedPostsData } from '../lib/posts';
+import Link from 'next/link';
+import Date from '../components/date';
+import React from 'react';
 import ReactGA from 'react-ga';
-import SubscribeForm from "../components/newsletter";
+import SubscribeForm from '../components/newsletter';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 export default function Home() {
-
   return (
     <div className={utilStyles.container}>
       <Head>
         <title>MyWebClass.org</title>
         <link rel="icon" href="/favicon.ico" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXE9WXQFQG"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CXE9WXQFQG"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-CXE9WXQFQG');
+            gtag('config', 'G-CXE9WXQFQG', { page_path: window.location.pathname });
           `,
-        }}></script>
+          }}
+        ></script>
       </Head>
 
         <header className={utilStyles.header}>
