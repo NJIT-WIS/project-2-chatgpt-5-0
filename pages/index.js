@@ -37,23 +37,23 @@ export default function Home() {
     <nav className={utilStyles.navbar}>
       <ul className={utilStyles.navlist}>
         <li className={utilStyles.navitem}>
-          <Link href="/" legacyBehavior>
-            <a className={utilStyles.navlink}>MyWebClass</a>
+          <Link href="/" className={utilStyles.navlink}>
+            MyWebClass
           </Link>
         </li>
         <li className={utilStyles.navitem}>
-          <Link href="/" legacyBehavior>
-            <a className={utilStyles.navlink}>Home</a>
+          <Link href="/" className={utilStyles.navlink}>
+            Home
           </Link>
         </li>
         <li className={utilStyles.navitem}>
-          <Link href="/courses" legacyBehavior>
-            <a className={utilStyles.navlink}>Courses</a>
+          <Link href="/courses" className={utilStyles.navlink}>
+            Courses
           </Link>
         </li>
         <li className={utilStyles.navitem}>
-          <Link href="/about" legacyBehavior>
-            <a className={utilStyles.navlink}>About</a>
+          <Link href="/about" className={utilStyles.navlink}>
+            About
           </Link>
         </li>
       </ul>
@@ -62,20 +62,22 @@ export default function Home() {
 
 <main className={utilStyles.main}>
   <section className={utilStyles.hero}>
-    <div className={utilStyles.heroTextContainer} style={{
-    backgroundImage: `url(${
+  <div className={utilStyles.heroTextContainer} style={{
+    background: `url(${
       isProd ? '/project-2-chatgpt-5-0' : ''
-    }/images/nelo_classroom.png)`,
+    }/images/nelo_classroom.png) no-repeat center center fixed`,
+    backgroundSize: 'cover',
+    backgroundPosition: '50% 0%',
   }}>
-      <div className={utilStyles.heroText}>
-        <h1>Welcome to MyWebClass.Org!</h1>
-        <p>Discover advanced technologies that will transform your teaching and their learning journey.</p>
-        <Link href="/courses" legacyBehavior>
-          <a className={utilStyles.button}>Explore Courses</a>
-        </Link>
-      </div>
+    <div className={utilStyles.heroText}>
+      <h1>Welcome to MyWebClass.Org!</h1>
+      <p>Discover advanced technologies that will transform your teaching and their learning journey.</p>
+      <Link href="/courses" className={utilStyles.button}>
+        Explore Courses
+      </Link>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 <SubscribeForm/>
 </div>
