@@ -5,8 +5,16 @@
         "title": "MyWebClass.org"
       },
       {
-        "path": "/about",
-        "title": "MyWebClass.org | About"
+        "path": "/instructors",
+        "title": "MyWebClass.org | Instructors"
+      },
+      {
+        "path": "/goals",
+        "title": "MyWebClass.org | Goals"
+      },
+      {
+        "path": "/courses",
+        "title": "MyWebClass.org | Courses"
       }
     ]
 }
