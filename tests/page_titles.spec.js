@@ -1,30 +1,8 @@
 const { test, expect } = require('@playwright/test');
-const { chromium } = require('playwright');
 const path = require('path');
 
 const config = require(path.join(process.cwd(), 'playwright.config.js'));
 const { pages } = require(path.join(process.cwd(), 'tests', 'pages.json'));
-
-const TIMEOUT = 1000;
-async function checkPageTitle(pageUrl, expectedTitle) {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-  await page.goto(pageUrl, { timeout: TIMEOUT });
-  const pageTitle = await page.title();
-  await browser.close();
-  expect(pageTitle).toBe(expectedTitle);
-}
-
-pages.forEach((page) => {
-
-  test(`Page "${page.path}" should have the correct title`, async ({}) => {
-    console.log(page.path)
-    const pageUrl = `${config.use.baseURL}${page.path}`;
-
-    const expectedTitle = page.title;
-    await checkPageTitle(pageUrl, expectedTitle);
-  });
-});
 
 /** function to generate random email address for testing **/
 function generateRandomEmail() {
@@ -32,39 +10,52 @@ function generateRandomEmail() {
   return `${randomString}@gmail.com`;
 }
 
-
-/** checks for courses navbar item to work  **/
-test('courses navbar', async ({ page }) => {
-  await page.getByRole('link', { name: 'Explore Courses' }).click();
-  await page.getByRole('heading', { name: 'Courses' }).click();
-});
-/** checks for instructors navbar item to work  **/
-test('instructors navbar', async ({ page }) => {
-  await page.getByRole('link', { name: 'Instructors' }).click();
-  await page.getByRole('heading', { name: 'Instructors', exact: true }).click();
+pages.forEach((page) => {
+  test(`Page "${page.path}" should have the correct title`, async ({ page }) => {
+    const pageUrl = `${config.use.baseURL}${page.path}`;
+    await page.goto(pageUrl);
+    const pageTitle = await page.title();
+    expect(pageTitle).toBe(page.title);
+  });
 });
 
-/** checks for goals navbar item to work  **/
-test('goals navbar', async ({ page }) => {
-  await page.getByRole('link', { name: 'Goals' }).click();
-  await page.getByRole('heading', { name: 'Embracing the Future of Online Learning: MyWebClass.org' }).click();
-});
+test.describe('Navbar tests', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto(`${config.use.baseURL}/`);
+  });
 
-/** checks if Mailchimp integration works**/
-test('Mailchimp', async ({ page }) => {
-  await page.getByPlaceholder('Email Address').click();
-  await page.fill('[placeholder="Email Address"]', generateRandomEmail());
-  await page.getByPlaceholder('Email Address').press('Enter');
-  await page.getByText('Successfully subscribed!').click();
-});
+  test('Explore Courses link works', async ({ page }) => {
+    await page.click('text=Explore Courses');
+    const pageTitle = await page.title();
+    expect(pageTitle).toBe('Courses');
+  });
 
-/** checks to see if instructor buttons scrolls down to proper professors**/
-test('instructions for Professor', async ({ page }) => {
-  await page.getByRole('link', { name: 'Instructors' }).click();
-  await page.getByRole('button', { name: 'Instructor 1' }).click();
-  await page.getByRole('heading', { name: 'Christopher Christiansen' }).click();
-  await page.getByRole('button', { name: 'Instructor 2' }).click();
-  await page.getByRole('heading', { name: 'D\'Angelo Morales' }).click();
-  await page.getByRole('button', { name: 'Instructor 3' }).click();
-  await page.getByRole('heading', { name: 'Keith Williams' }).click();
+  test('Instructors link works', async ({ page }) => {
+    await page.click('text=Instructors');
+    const pageTitle = await page.title();
+    expect(pageTitle).toBe('Instructors');
+  });
+
+  test('Goals link works', async ({ page }) => {
+    await page.click('text=Goals');
+    const pageTitle = await page.title();
+    expect(pageTitle).toBe('Goals');
+  });
+
+  test('Mailchimp integration works', async ({ page }) => {
+    await page.click('[placeholder="Email Address"]');
+    await page.fill('[placeholder="Email Address"]', generateRandomEmail());
+    await page.press('[placeholder="Email Address"]', 'Enter');
+    await expect(page.locator('text=Successfully subscribed!')).toBeVisible();
+  });
+
+  test('Instructor buttons scroll to correct professors', async ({ page }) => {
+    await page.click('text=Instructors');
+    await page.click('text=Instructor 1');
+    await expect(page.locator('text=Christopher Christiansen')).toBeVisible();
+    await page.click('text=Instructor 2');
+    await expect(page.locator('text=D\'Angelo Morales')).toBeVisible();
+    await page.click('text=Instructor 3');
+    await expect(page.locator('text=Keith Williams')).toBeVisible();
+  });
 });
