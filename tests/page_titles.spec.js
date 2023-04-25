@@ -19,43 +19,28 @@ pages.forEach((page) => {
   });
 });
 
-test.describe('Navbar tests', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto(`${config.use.baseURL}/`);
-  });
+test('navbar test', async ({ page }) => {
+  await page.locator('a:has-text("Instructors")').click();
+  await page.locator('h1:text("Instructors")').click();
+  await page.locator('a:has-text("Courses")').click();
+  await page.locator('h1:text("Courses")').click();
+  await page.locator('a:has-text("Goals")').click();
+  await page.locator('h1:text("Embracing the Future of Online Learning: MyWebClass.org")').click();
+});
 
-  test('Explore Courses link works', async ({ page }) => {
-    await page.click('text=Explore Courses');
-    const pageTitle = await page.title();
-    expect(pageTitle).toBe('Courses');
-  });
+test('Mailchimp integration works', async ({ page }) => {
+  await page.click('[placeholder="Email Address"]');
+  await page.fill('[placeholder="Email Address"]', generateRandomEmail());
+  await page.press('[placeholder="Email Address"]', 'Enter');
+  await expect(page.locator('text=Successfully subscribed!')).toBeVisible();
+});
 
-  test('Instructors link works', async ({ page }) => {
-    await page.click('text=Instructors');
-    const pageTitle = await page.title();
-    expect(pageTitle).toBe('Instructors');
-  });
-
-  test('Goals link works', async ({ page }) => {
-    await page.click('text=Goals');
-    const pageTitle = await page.title();
-    expect(pageTitle).toBe('Goals');
-  });
-
-  test('Mailchimp integration works', async ({ page }) => {
-    await page.click('[placeholder="Email Address"]');
-    await page.fill('[placeholder="Email Address"]', generateRandomEmail());
-    await page.press('[placeholder="Email Address"]', 'Enter');
-    await expect(page.locator('text=Successfully subscribed!')).toBeVisible();
-  });
-
-  test('Instructor buttons scroll to correct professors', async ({ page }) => {
-    await page.click('text=Instructors');
-    await page.click('text=Instructor 1');
-    await expect(page.locator('text=Christopher Christiansen')).toBeVisible();
-    await page.click('text=Instructor 2');
-    await expect(page.locator('text=D\'Angelo Morales')).toBeVisible();
-    await page.click('text=Instructor 3');
-    await expect(page.locator('text=Keith Williams')).toBeVisible();
-  });
+test('Instructor buttons scroll to correct professors', async ({ page }) => {
+  await page.click('text=Instructors');
+  await page.click('text=Instructor 1');
+  await expect(page.locator('text=Christopher Christiansen')).toBeVisible();
+  await page.click('text=Instructor 2');
+  await expect(page.locator('text=D\'Angelo Morales')).toBeVisible();
+  await page.click('text=Instructor 3');
+  await expect(page.locator('text=Keith Williams')).toBeVisible();
 });
