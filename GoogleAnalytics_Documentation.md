@@ -1,5 +1,5 @@
 # Google Analytics Data and Insights Documentation
-
+# [Report](/report.pdf)
 ## Introduction:
 Google Analytics is a powerful tool that provides valuable data and insights about website performance and user behavior. This documentation aims to provide an overview of the quantifiable data and insights that can be derived from Google Analytics, along with their significance and potential actions for optimization.
 
@@ -64,4 +64,3 @@ Google Analytics is a powerful tool that provides valuable data and insights abo
 #### Insight:
 - Understanding the demographics
 
-[Report](/report.pdf)
