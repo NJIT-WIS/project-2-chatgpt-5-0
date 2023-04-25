@@ -33,7 +33,7 @@ export default function Home() {
         ></script>
       </Head>
 
-        <header className={utilStyles.header}>
+  <header className={utilStyles.header}>
     <nav className={utilStyles.navbar}>
       <ul className={utilStyles.navlist}>
         <li className={utilStyles.navitem}>
@@ -47,13 +47,18 @@ export default function Home() {
           </Link>
         </li>
         <li className={utilStyles.navitem}>
+          <Link href="/instructors" className={utilStyles.navlink}>
+            Instructors
+          </Link>
+        </li>
+        <li className={utilStyles.navitem}>
           <Link href="/courses" className={utilStyles.navlink}>
             Courses
           </Link>
         </li>
-        <li className={utilStyles.navitem}>
-          <Link href="/about" className={utilStyles.navlink}>
-            About
+         <li className={utilStyles.navitem}>
+          <Link href="/goals" className={utilStyles.navlink}>
+            Goals
           </Link>
         </li>
       </ul>

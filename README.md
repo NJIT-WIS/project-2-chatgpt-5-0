@@ -43,7 +43,7 @@ Remember, the key to success in this project is consistent effort, collaboration
 - [Project Requirements and Gradinng Rurbrics for All Projects](https://docs.google.com/document/d/1Zub2Fx11UqdyawYVh8kPn3zDytlWRUDBkhFCaIxIC1g/edit?usp=sharing)
 
 ## Project Background Information and Readings
-1. [About Page](https://docs.google.com/document/d/1zdfk3Xv5A6ZEB9_Dirsp2S40j_xxixx7H-852GwuJm8/edit?usp=sharing)
+1. [Instructors Page](https://docs.google.com/document/d/1zdfk3Xv5A6ZEB9_Dirsp2S40j_xxixx7H-852GwuJm8/edit?usp=sharing)
 2. [Q & A with the CEO](https://docs.google.com/document/d/1vWYgV5UuvFydIOmTDrsbWnwTd1jGx672zF5mli2kYVo/edit?usp=sharing)
 3. [Understanding MyWebClass.Org](https://docs.google.com/document/d/17SNVdldHg7HZ9FNCk6rsbEELPK7VFTGlcuUFwe2qU44/edit?usp=sharing)
 4. [Branding Guide](https://docs.google.com/document/d/1CFXvTdJ4FbkBQct1IivtCA7BbxyzqxEwl3Em6h12w80/edit?usp=sharing)

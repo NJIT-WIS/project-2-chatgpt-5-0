@@ -25,31 +25,36 @@ export default function Courses() {
       </Head>
 
       <header className={utilStyles.header}>
-        <nav className={utilStyles.navbar}>
-          <ul className={utilStyles.navlist}>
-            <li className={utilStyles.navitem}>
-              <Link href="/" legacyBehavior>
-                <a className={utilStyles.navlink}>MyWebClass</a>
-              </Link>
-            </li>
-            <li className={utilStyles.navitem}>
-              <Link href="/" legacyBehavior>
-                <a className={utilStyles.navlink}>Home</a>
-              </Link>
-            </li>
-            <li className={utilStyles.navitem}>
-              <Link href="/courses" legacyBehavior>
-                <a className={utilStyles.navlink}>Courses</a>
-              </Link>
-            </li>
-            <li className={utilStyles.navitem}>
-              <Link href="/about" legacyBehavior>
-                <a className={utilStyles.navlink}>About</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+    <nav className={utilStyles.navbar}>
+      <ul className={utilStyles.navlist}>
+        <li className={utilStyles.navitem}>
+          <Link href="/" className={utilStyles.navlink}>
+            MyWebClass
+          </Link>
+        </li>
+        <li className={utilStyles.navitem}>
+          <Link href="/" className={utilStyles.navlink}>
+            Home
+          </Link>
+        </li>
+        <li className={utilStyles.navitem}>
+          <Link href="/instructors" className={utilStyles.navlink}>
+            Instructors
+          </Link>
+        </li>
+        <li className={utilStyles.navitem}>
+          <Link href="/courses" className={utilStyles.navlink}>
+            Courses
+          </Link>
+        </li>
+         <li className={utilStyles.navitem}>
+          <Link href="/goals" className={utilStyles.navlink}>
+            Goals
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
       <main className={utilStyles.main}>
         <h1 className={utilStyles.headingLg}>Courses</h1>
