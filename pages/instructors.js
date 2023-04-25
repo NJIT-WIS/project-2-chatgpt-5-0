@@ -14,7 +14,7 @@ export default function Instructors() {
   return (
     <div className={utilStyles.container}>
       <Head>
-        <title>MyWebClass.org | About</title>
+        <title>MyWebClass.org | Instructors</title>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXE9WXQFQG"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
