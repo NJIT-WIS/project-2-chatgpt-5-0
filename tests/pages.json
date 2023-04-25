@@ -1,21 +1,20 @@
 {
-    "pages": [
-      {
-        "path": "/",
-        "title": "MyWebClass.org"
-      },
-      {
-        "path": "/instructors",
-        "title": "MyWebClass.org | Instructors"
-      },
-      {
-        "path": "/goals",
-        "title": "MyWebClass.org | Goals"
-      },
-      {
-        "path": "/courses",
-        "title": "MyWebClass.org | Courses"
-      }
-    ]
+  "pages": [
+    {
+      "path": "/",
+      "title": "Home"
+    },
+    {
+      "path": "/courses",
+      "title": "Courses"
+    },
+    {
+      "path": "/instructors",
+      "title": "Instructors"
+    },
+    {
+      "path": "/goals",
+      "title": "Goals"
+    }
+  ]
 }
-  

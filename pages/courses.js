@@ -12,7 +12,7 @@ export default function Courses() {
   return (
     <div className={utilStyles.container}>
       <Head>
-        <title>MyWebClass.org | Courses</title>
+        <title>Courses</title>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXE9WXQFQG"></script>
         <script dangerouslySetInnerHTML={{
           __html: `

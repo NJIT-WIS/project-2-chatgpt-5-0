@@ -15,7 +15,7 @@ export default function About() {
   return (
     <div className={utilStyles.container}>
       <Head>
-        <title>MyWebClass.org | Goals</title>
+        <title>Goals</title>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXE9WXQFQG"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
