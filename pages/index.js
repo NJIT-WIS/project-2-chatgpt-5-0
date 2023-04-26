@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className={utilStyles.container}>
       <Head>
-        <title>MyWebClass.org</title>
+        <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
         <script
           async
