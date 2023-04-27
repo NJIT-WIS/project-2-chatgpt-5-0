@@ -43,7 +43,7 @@ module.exports = defineConfig({
   // Specify the local development server to run before the tests
   webServer: {
     command: 'next dev',
-    port: 3000,
+    port: 3001,
     reuseExistingServer: true,
   },
 
