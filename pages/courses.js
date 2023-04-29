@@ -59,18 +59,16 @@ export default function Courses() {
       <main className={utilStyles.main}>
         <h1 className={utilStyles.headingLg}>Courses</h1>
         <section>
-          <h2 id="course1" className={utilStyles.headingMd}>Course 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo mauris eget ante bibendum vehicula. Suspendisse potenti. Sed auctor nulla non orci finibus, non varius tellus suscipit. Aenean ut sapien dolor. Proin rutrum libero quis magna blandit aliquet. Vestibulum eleifend risus id sapien feugiat, ut tincidunt est dictum. Nunc id metus at nunc lobortis semper. </p>
-          <p>Quisque auctor, dolor eu fringilla iaculis, risus massa venenatis nulla, in scelerisque ex purus vitae odio. Nam rutrum tincidunt lacus vel pharetra. Aliquam erat volutpat. Morbi maximus posuere tellus, in bibendum turpis viverra id. Nunc sit amet augue sed orci hendrerit bibendum. Nam vitae ante ante. Integer pellentesque enim lectus, quis ultrices lorem vestibulum vel. Sed lobortis mauris id euismod pharetra. Donec eu quam in lorem sodales imperdiet at non nunc. Fusce venenatis, lorem eget tristique posuere, lorem ante dignissim nisl, a tempor velit augue at mauris. </p>
-          <p>Nunc tristique, enim non laoreet sodales, risus magna pharetra sapien, at posuere lacus dolor eget ex. Donec eget orci sed nulla scelerisque egestas.</p>
+          <h2 id="course1" className={utilStyles.headingMd}>Course 1: Mastering Modern Web Development with React, Next.js, and Node.js (Instructor: Christopher Christiansen)</h2>
+          <p>In this comprehensive course, Christopher Christiansen will guide students through the world of modern web development using React, Next.js, and Node.js. Students will learn how to build dynamic, responsive web applications, leveraging the power of these popular JavaScript frameworks and libraries. Alongside front-end development, the course also delves into ChatGPT Prompt Engineering, demonstrating the potential of integrating AI-driven features into web applications. By the end of the course, students will have gained the expertise to create efficient, interactive, and AI-enhanced web applications that stand out in today's competitive digital landscape.</p>
         </section>
         <section>
-        <h2 id="course2" className={utilStyles.headingMd}>Course 2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo mauris eget ante bibendum vehicula. Suspendisse potenti. Sed auctor nulla non orci finibus, non varius tellus suscipit. Aenean ut sapien dolor. Proin rutrum libero quis magna blandit aliquet. Vestibulum eleifend risus id sapien feugiat, ut tincidunt est dictum. Nunc id metus at nunc lobortis semper. </p>
+        <h2 id="course2" className={utilStyles.headingMd}>Course 2: Crafting Visually Appealing and Accessible Web Applications (Instructor: D'Angelo Morales)</h2>
+          <p>Join D'Angelo Morales in this exciting course that focuses on creating visually stunning and accessible web applications using HTML, CSS, and JavaScript. Students will learn the fundamental principles of web design and user experience, ensuring their creations are both aesthetically pleasing and inclusive. D'Angelo will cover essential techniques for creating responsive layouts, effective navigation, and engaging user interfaces. By the end of the course, students will be well-equipped to design web applications that are not only visually impressive but also cater to diverse audiences and accessibility needs.</p>
         </section>
         <section>
-        <h2 id="course3" className={utilStyles.headingMd}>Course 3</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo mauris eget ante bibendum vehicula. Suspendisse potenti. Sed auctor nulla non orci finibus, non varius tellus suscipit. Aenean ut sapien dolor. Proin rutrum libero quis magna blandit aliquet. Vestibulum eleifend risus id sapien feugiat, ut tincidunt est dictum. Nunc id metus at nunc lobortis semper. </p>
+        <h2 id="course3" className={utilStyles.headingMd}>Course 3: Robust Web Applications: Databases, APIs, and Server-Side Optimization (Instructor: Keith Williams)</h2>
+          <p>In this in-depth course, Keith Williams will help students master the intricacies of databases, APIs, server-side technologies, and CI/CD. Students will learn how to build and manage efficient databases, create and consume APIs, and optimize server-side performance for speed and reliability. Keith will also introduce continuous integration and continuous deployment (CI/CD) methodologies, ensuring students are well-versed in modern web development practices. By the end of the course, learners will have a strong foundation in back-end development and the skills required to create robust and reliable web applications.</p>
         </section>
       </main>
       <SubscribeForm/>
