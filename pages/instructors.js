@@ -82,7 +82,7 @@ export default function Instructors() {
 </div>
  <div className={utilStyles.image} style={{ width: '1100px', height: '400px', overflow: 'hidden', marginTop: '75px' }}>
   <img
-    src={`${isProd ? '/project-2-chatgpt-5-0' : ''}/images/chris.jpg`}
+    src={`${isProd ? '/project-2-chatgpt-5-0' : ''}/images/dangelo.jpeg`}
     alt="Image 1"
     style={{ objectFit: 'cover', width: '100%', height: '70%' }}
   />
@@ -99,7 +99,7 @@ export default function Instructors() {
 </div>
  <div className={utilStyles.image} style={{ width: '1100px', height: '400px', overflow: 'hidden', marginTop: '75px' }}>
   <img
-    src={`${isProd ? '/project-2-chatgpt-5-0' : ''}/images/chris.jpg`}
+    src={`${isProd ? '/project-2-chatgpt-5-0' : ''}/images/Keith.jpeg`}
     alt="Image 1"
     style={{ objectFit: 'cover', width: '100%', height: '70%' }}
   />

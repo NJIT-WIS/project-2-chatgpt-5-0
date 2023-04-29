@@ -75,10 +75,10 @@ export default function Home() {
     backgroundPosition: '50% 0%',
   }}>
     <div className={utilStyles.heroText}>
-      <h1>Welcome to MyWebClass.Org!</h1>
-      <p>Discover advanced technologies that will transform your teaching and their learning journey.</p>
+      <h1>Now Recruiting!</h1>
+      <p>Join MyWebClass.org as a tester to stay up-to-date with the latest web development technologies and enhance your teaching and their learning journey.</p>
       <Link href="/courses" className={utilStyles.button}>
-        Explore Courses
+        Learn more
       </Link>
     </div>
   </div>
