@@ -41,8 +41,8 @@ async function checkMailchimpIntegration(pageUrl) {
   await page.click('[placeholder="Email Address"]');
   await page.fill('[placeholder="Email Address"]', generateRandomEmail());
   await page.press('[placeholder="Email Address"]', 'Enter');
-  await page.waitForSelector('text=Successfully subscribed!', { timeout: TIMEOUT });
-  const isSuccessVisible = await page.locator('text=Successfully subscribed!').isVisible();
+  await page.waitForSelector('text=Sent to your inbox.', { timeout: TIMEOUT });
+  const isSuccessVisible = await page.locator('text=Sent to your inbox.').isVisible();
   await browser.close();
   expect(isSuccessVisible).toBeTruthy();
 }
