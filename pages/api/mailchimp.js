@@ -35,9 +35,9 @@ export default function NewsLetterForm({ className, status, message, onValidated
 
   return (
     <div className={`${utilStyles.flex} ${utilStyles.flexCol} ${utilStyles.w60} ${utilStyles.mr4}`}>
-      <h3 className={`${utilStyles.mb2}`}>Subscribe to our Newsletter</h3>
+      <h3 className={`${utilStyles.mb2}`}>Subscribe to join!</h3>
       {isSubscribed ? (
-        <p>Successfully subscribed!</p>
+        <p>Sent to your inbox.</p>
       ) : (
         <form onSubmit={handleFormSubmit}>
           <label htmlFor="email">Email:</label>
@@ -64,7 +64,7 @@ export default function NewsLetterForm({ className, status, message, onValidated
                 Sending... <AiOutlineLoading3Quarters className="w-4 h-4 animate-spin"/>
               </p>
             ) : (
-              "Subscribe"
+              "Join now!"
             )}
           </button>
         </form>
